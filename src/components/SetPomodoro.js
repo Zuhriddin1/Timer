@@ -1,17 +1,13 @@
 import React, { useContext, useState } from 'react'
 import { SettingsContext } from '../context/SettingsContext'
-
 const SetPomodoro = () => {
-
     const [newTimer, setNewTimer] = useState({
         work: 0.2,
         short: 0.1,
         long: 0.5,
         active: 'work'
     })
-
     const {updateExecute} = useContext(SettingsContext)
-
     const handleChange = input => {
         const {name, value} = input.target
         switch (name) {
@@ -52,5 +48,4 @@ const SetPomodoro = () => {
         </div>
     )
 }
-
 export default SetPomodoro

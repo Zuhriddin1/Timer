@@ -3,7 +3,6 @@ import Button from "./components/Button";
 import CountdownAnimation from "./components/CountdownAnimation";
 import SetPomodoro from "./components/SetPomodoro";
 import { SettingsContext } from "./context/SettingsContext";
-
 const App = () => {
   const {
     pomodoro,
@@ -16,11 +15,9 @@ const App = () => {
     setCurrentTimer,
     SettingsBtn,
   } = useContext(SettingsContext);
-
   useEffect(() => {
     updateExecute(executing);
   }, [executing, startAnimate]);
-
   return (
     <div className="container">
       <h1>Pomodoro</h1>
@@ -87,5 +84,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
